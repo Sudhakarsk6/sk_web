@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sudhakarsk</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header/Nav -->
+  <header>
+    <div class="logo-wrap">
+      <img src="logo.png" alt="SkLogo" class="logo-glow" />
+      <span class="brand">Sudhakar S</span>
+    </div>
+    <nav>
+      <a href="#home" class="nav-link active" data-page="home">Home</a>
+      <a href="#about" class="nav-link" data-page="about">About</a>
+      <a href="#experience" class="nav-link" data-page="experience">Experience</a>
+      <a href="#projects" class="nav-link" data-page="projects">Projects</a>
+      <a href="#education" class="nav-link" data-page="education">Education</a>
+      <a href="#contact" class="nav-link" data-page="contact">Contact</a>
+      <div class="socials">
+        <a href="https://github.com/Sudhakarsk6" target="_blank" aria-label="GitHub"><img src="assets/github.svg" alt="GitHub"></a>
+        <a href="https://linkedin.com/in/sudhakarsk" target="_blank" aria-label="LinkedIn"><img src="assets/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://leetcode.com/sudhakarsk" target="_blank" aria-label="LeetCode"><img src="assets/leetcode.svg" alt="LeetCode"></a>
+        <a href="https://hackerrank.com/sudhakarsk101" target="_blank" aria-label="HackerRank"><img src="assets/hackerrank.svg" alt="HackerRank"></a>
+      </div>
+      <button id="theme-toggle" aria-label="Toggle theme"><span id="theme-icon">🌙</span></button>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="page-section active">
+    <div class="hero-bg">
+      <canvas id="particles"></canvas>
+      <div class="gradient-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-left">
+        <h1 class="fade-in"><span class="wave">👋</span> Hi, I'm <span class="neon">Sudhakar S</span></h1>
+        <h2 class="subtitle fade-in-delay">Python Developer</h2>
+        <div class="dynamic-title fade-in-delay2">
+          I build:
+          <span class="typed neon" id="typed"></span>
+        </div>
+        <div class="hero-details fade-in-delay3">
+          <p><strong>Location:</strong> Tamil Nadu, India</p>
+          <p><strong>Email:</strong> <a href="mailto:sudhakarsk101@gmail.com">sudhakarsk101@gmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+917904844037">+91 ***** *****</a></p>
+        </div>
+        <a href="#projects" class="cta nav-link fade-in-delay3" data-page="projects">🚀 View My Projects</a>
+        <div class="hero-socials fade-in-delay3">
+          <a href="https://github.com/Sudhakarsk6" target="_blank"><img src="assets/github.svg" alt="GitHub"></a>
+          <a href="https://linkedin.com/in/sudhakarsk" target="_blank"><img src="assets/linkedin.svg" alt="LinkedIn"></a>
+          <a href="https://leetcode.com/sudhakarsk" target="_blank"><img src="assets/leetcode.svg" alt="LeetCode"></a>
+          <a href="https://hackerrank.com/sudhakarsk101" target="_blank"><img src="assets/hackerrank.svg" alt="HackerRank"></a>
+        </div>
+      </div>
+      <div class="hero-avatar fade-in-delay4">
+        <img src="avatar.png" alt="Sudhakar Avatar" class="avatar-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="page-section">
+    <div class="section-content about-content">
+      <h2 class="section-title fade-in">About Me</h2>
+      <div class="about-main fade-in-delay">
+        <p>
+          !lorem with 1 year of experience in manual testing and a strong foundation in programming, debugging, and problem-solving. 
+          Aspiring to transition into full-time software development roles, leveraging my skills in Python, Django, and automation to build impactful solutions.
+        </p>
+      </div>
+      <div class="skills-section fade-in-delay2">
+        <h3 class="skills-title">Skills</h3>
+        <div class="skills-list">
+          <div class="skill"><img src="assets/python.svg" alt="Python"><span>Python</span>
+            <div class="skill-bar" data-percent="98"><div class="skill-bar-fill"></div></div>
+          </div>
+          <div class="skill"><img src="assets/django.svg" alt="Django"><span>Django & Flask</span>
+            <div class="skill-bar" data-percent="92"><div class="skill-bar-fill"></div></div>
+          </div>
+          <div class="skill"><img src="assets/cpp.svg" alt="C/C++"><span>C/C++</span>
+            <div class="skill-bar" data-percent="60"><div class="skill-bar-fill"></div></div>
+          </div>
+          <div class="skill"><img src="assets/java.svg" alt="Java"><span>Java</span>
+            <div class="skill-bar" data-percent="60"><div class="skill-bar-fill"></div></div>
+          </div>
+          <div class="skill"><img src="assets/sql.svg" alt="SQL"><span>SQL (MySQL/SQLite)</span>
+            <div class="skill-bar" data-percent="80"><div class="skill-bar-fill"></div></div>
+          </div>
+          <div class="skill"><img src="assets/html5.svg" alt="HTML5"><span>HTML, CSS, JS</span>
+            <div class="skill-bar" data-percent="80"><div class="skill-bar-fill"></div></div>
+          </div>
+          <div class="skill"><img src="assets/git.svg" alt="Git"><span>Git & GitHub</span>
+            <div class="skill-bar" data-percent="85"><div class="skill-bar-fill"></div></div>
+          </div>
+          <div class="skill"><img src="assets/testing.svg" alt="Testing"><span>Manual & Regression Testing</span>
+            <div class="skill-bar" data-percent="80"><div class="skill-bar-fill"></div></div>
+          </div>
+          <div class="skill"><img src="assets/softskills.svg" alt="Problem Solving"><span>Problem Solving</span>
+            <div class="skill-bar" data-percent="90"><div class="skill-bar-fill"></div></div>
+          </div>
+          <div class="skill"><img src="assets/critical.svg" alt="Critical Thinking"><span>Critical Thinking</span>
+            <div class="skill-bar" data-percent="88"><div class="skill-bar-fill"></div></div>
+          </div>
+          <div class="skill"><img src="assets/communication.svg" alt="Communication"><span>Communication</span>
+            <div class="skill-bar" data-percent="86"><div class="skill-bar-fill"></div></div>
+          </div>
+        </div>
+        <div class="resume-row fade-in-delay3">
+          <button class="resume-btn" onclick="openResume()">Download Resume</button>
+        </div>
+      </div>
+      <div class="extra-info fade-in-delay3">
+        <h4>Languages:</h4>
+        <p>Tamil, English</p>
+        <h4>Hobbies:</h4>
+        <p>Travel, Drawing, Music</p>
+      </div>
+    </div>
+    <!-- Resume modal -->
+    <div id="resume-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeResume()">&times;</span>
+        <iframe src="resume.pdf" frameborder="0"></iframe>
+        <a href="resume.pdf" download class="resume-download-link">Download PDF</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="page-section">
+    <div class="section-content experience-content">
+      <h2 class="section-title fade-in">Experience</h2>
+      <div class="exp-card fade-in-delay">
+        <h3>Associate Validation Engineer</h3>
+        <p><strong>UST Global Technology Pvt Ltd.</strong>, Bangalore<br>
+        <span class="exp-date">May 2024 - Present</span></p>
+        <ul>
+          <li>Executed comprehensive manual testing for semiconductor validation with detailed test plans and scripts across various configurations.</li>
+          <li>Collaborated with cross-functional teams to identify software defects and troubleshoot hardware/software integration issues.</li>
+          <li>Analyzed test results and reported bugs/issues, providing actionable recommendations for product enhancement.</li>
+          <li>Worked across diverse domains including security, manageability, and gaming, utilizing various tools for efficient execution.</li>
+          <li>Enhanced testing efficiency by developing scripts to automate routine validation tasks, achieving a 38% reduction in testing time.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="page-section">
+    <div class="section-content education-content">
+      <h2 class="section-title fade-in">Education</h2>
+      <div class="edu-card fade-in-delay">
+        <h3>Master’s Degree in Computer Applications (MCA)</h3>
+        <p>Adhiyamaan College of Engineering, Hosur<br>
+        <span class="edu-date">2020 - 2023</span> | Graduated with 83%</p>
+      </div>
+      <div class="edu-card fade-in-delay2">
+        <h3>Bachelor’s Degree in Computer Science (B.Sc. CS)</h3>
+        <p>M.G.R Arts and Science College, Hosur<br>
+        <span class="edu-date">2018 - 2021</span> | Graduated with 71%</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="page-section">
+    <div class="section-content projects-content">
+      <h2 class="section-title fade-in">Projects</h2>
+      <div class="projects-list">
+        <div class="project-card fade-in-delay">
+          <img src="assets/journeylog.png" alt="Journey Log Application" class="project-img" />
+          <h3>Journey Log Application</h3>
+          <p>Major Project | Jan 2023 - Apr 2023</p>
+          <p>Developed a Journey Log application with Kivy/KivyMD and Firebase, enabling users to document and monitor travel adventures with an intuitive UI.</p>
+          <div class="project-tools">Kivy • KivyMD • Firebase</div>
+        </div>
+        <div class="project-card fade-in-delay2">
+          <img src="assets/travelblog.png" alt="Travel Blog Application" class="project-img" />
+          <h3>Travel Blog Application</h3>
+          <p>Mini Project | Sep 2022 - Dec 2022</p>
+          <p>Built a web-based travel blog using Django. Implemented post creation, viewing, and user profile management, demonstrating fullstack skills.</p>
+          <div class="project-tools">HTML • CSS • JS • Python (Django) • MySQL</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS & PUBLICATIONS -->
+  <section id="achievements" class="page-section">
+    <div class="section-content achievements-content">
+      <h2 class="section-title fade-in">Certifications & Publications</h2>
+      <div class="badges-list fade-in-delay">
+        <span class="badge">Data Science with Python (Simplilearn)</span>
+        <span class="badge">SQL Certificate (HackerRank)</span>
+        <span class="badge">Problem Solving (HackerRank)</span>
+        <span class="badge">Python For Data Science (Udmey)</span>
+        <span class="badge">Automate the Boring Stuff with Python (Udemy)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="page-section">
+    <div class="section-content contact-content">
+      <h2 class="section-title fade-in">Contact</h2>
+      <p class="fade-in-delay">Have an idea, project, or just want to say hi? I’d love to hear from you.</p>
+      <form class="contact-form fade-in-delay2" id="contact-form" autocomplete="off">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="send-btn"><span>Send Message</span></button>
+        <div id="contact-status"></div>
+      </form>
+      <div class="contact-socials fade-in-delay3">
+        <a href="https://github.com/Sudhakarsk6" target="_blank"><img src="assets/github.svg" alt="GitHub"></a>
+        <a href="https://linkedin.com/in/sudhakarsk" target="_blank"><img src="assets/linkedin.svg" alt="LinkedIn"></a>
+        <a href="https://leetcode.com/sudhakarsk" target="_blank"><img src="assets/leetcode.svg" alt="LeetCode"></a>
+        <a href="https://hackerrank.com/sudhakarsk101" target="_blank"><img src="assets/hackerrank.svg" alt="HackerRank"></a>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; <span id="year"></span> Sudhakar S. All rights reserved.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
