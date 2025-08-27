@@ -2,211 +2,241 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sudhakarsk</title>
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link rel="icon" href="logo.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Sudhakar S | Python Developer Portfolio">
+  <title>Sudhakar S | Python Developer</title>
+  <link rel="icon" href="logo.png">
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header/Nav -->
+  <!-- ===== HEADER ===== -->
   <header>
-    <div class="logo-wrap">
-      <img src="logo.png" alt="SkLogo" class="logo-glow" />
-      <span class="brand">Sudhakar S</span>
-    </div>
-    <nav>
-      <a href="#home" class="nav-link active" data-page="home">Home</a>
-      <a href="#about" class="nav-link" data-page="about">About</a>
-      <a href="#experience" class="nav-link" data-page="experience">Experience</a>
-      <a href="#projects" class="nav-link" data-page="projects">Projects</a>
-      <a href="#contact" class="nav-link" data-page="contact">Contact</a>
-      <div class="socials">
-        <a href="https://github.com/Sudhakarsk6" target="_blank" ><img src="assets/github.svg" alt="GitHub"></a>
-        <a href="https://linkedin.com/in/sudhakarsk" target="_blank" ><img src="assets/linkedin.svg" alt="LinkedIn"></a>
-        <a href="https://leetcode.com/sudhakarsk" target="_blank" ><img src="assets/leetcode.svg" alt="LeetCode"></a>
-        <a href="https://hackerrank.com/sudhakarsk101" target="_blank"><img src="assets/hackerrank.svg" alt="HackerRank"></a>
-      </div>
-      <button id="theme-toggle" aria-label="Toggle theme"><span id="theme-icon">🌙</span></button>
+    <nav class="navbar" aria-label="Main Navigation">
+      <a class="navbar__logo" href="#home" aria-label="Sudhakar S, Python Developer">
+        <img src="logo.png" alt="Logo">
+        Sudhakar S
+      </a>
+      <button class="navbar__toggle" aria-label="Open navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="navbar__links" id="navbar-links">
+        <li><a href="#home" class="navbar__link active" aria-current="page">Home</a></li>
+        <li><a href="#about" class="navbar__link">About</a></li>
+        <li><a href="#skills" class="navbar__link">Skills</a></li>
+        <li><a href="#experience" class="navbar__link">Experience</a></li>
+        <li><a href="#projects" class="navbar__link">Projects</a></li>
+        <li><a href="#certifications" class="navbar__link">Certifications</a></li>
+        <li><a href="#contact" class="navbar__link">Contact</a></li>
+      </ul>
+      <button class="navbar__theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
     </nav>
   </header>
-
-  <!-- HERO SECTION -->
-  <section id="home" class="page-section active">
-    <div class="hero-bg">
-      <canvas id="particles"></canvas>
-      <div class="gradient-overlay"></div>
-    </div>
-    <div class="hero-content">
-      <div class="hero-left">
-        <h1 class="fade-in"><span class="wave">👋</span> Hi, I'm <span class="neon">Sudhakar S</span></h1>
-        <h2 class="subtitle fade-in-delay">Python Developer</h2>
-        <div class="dynamic-title fade-in-delay2">
-          I build:
-          <span class="typed neon" id="typed"></span>
-        </div>
-        <div class="hero-details fade-in-delay3">
-          <p><strong>Location:</strong> Tamil Nadu, India</p>
-          <p><strong>Email:</strong> <a href="mailto:sudhakarsk101@gmail.com">sudhakarsk101@gmail.com</a></p>
-        </div>
-        <a href="#projects" class="cta nav-link fade-in-delay3" data-page="projects"> My Projects</a>
-        <div class="hero-socials fade-in-delay3">
-          <a href="https://github.com/Sudhakarsk6" target="_blank"><img src="assets/github.svg" alt="GitHub"></a>
-          <a href="https://linkedin.com/in/sudhakarsk" target="_blank"><img src="assets/linkedin.svg" alt="LinkedIn"></a>
-          <a href="https://leetcode.com/sudhakarsk" target="_blank"><img src="assets/leetcode.svg" alt="LeetCode"></a>
-          <a href="https://hackerrank.com/sudhakarsk101" target="_blank"><img src="assets/hackerrank.svg" alt="HackerRank"></a>
-        </div>
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home" aria-label="Home">
+    <canvas class="hero__bg-canvas" id="hero-particles"></canvas>
+    <div class="hero__content">
+      <img src="avatar.png" alt="Sudhakar S profile photo" class="hero__avatar" />
+      <div class="hero__greeting">👋 Hi, I'm</div>
+      <h1 class="hero__name">Sudhakar S</h1>
+      <div class="hero__role" id="typewriter"></div>
+      <p class="hero__desc">Python Developer passionate about building robust backends, modern web apps, and automating the boring stuff.<br>
+        <span style="color:var(--primary);font-weight:500;">Tamil Nadu, India</span>
+      </p>
+      <div class="hero__actions">
+        <a href="#contact" class="btn btn--secondary"><i class="fas fa-envelope"></i> Contact Me</a>
+        <button class="btn" id="resume-btn"><i class="fas fa-file-alt"></i> View Resume</button>
       </div>
-      <div class="hero-avatar fade-in-delay4">
-        <img src="avatar.png" alt="Sudhakar Avatar" class="avatar-img" />
+      <div class="hero__hobbies">
+        <span title="Travel"><i class="fa-solid fa-plane-up"></i> Travel</span>
+        <span title="Drawing"><i class="fa-solid fa-pencil"></i> Drawing</span>
+        <span title="Music"><i class="fa-solid fa-music"></i> Music</span>
       </div>
     </div>
   </section>
-
-  <!-- ABOUT -->
-  <section id="about" class="page-section">
-    <div class="section-content about-content">
-      <h2 class="section-title fade-in">About Me</h2>
-      <div class="about-main fade-in-delay">
-        <p>
-          !lorem with 1 year of experience in manual testing and a strong foundation in programming, debugging, and problem-solving. 
-          Aspiring to transition into full-time software development roles, leveraging my skills in Python, Django, and automation to build impactful solutions.
-        </p>
-      </div>
-      <div class="skills-section fade-in-delay2">
-        <h3 class="skills-title">Skills</h3>
-        <div class="skills-list">
-          <div class="skill"><img src="assets/python.svg" alt="Python"><span>Python</span>
-            <div class="skill-bar" data-percent="98"><div class="skill-bar-fill"></div></div>
-          </div>
-          <div class="skill"><img src="assets/django.svg" alt="Django"><span>Django & Flask</span>
-            <div class="skill-bar" data-percent="92"><div class="skill-bar-fill"></div></div>
-          </div>
-          <div class="skill"><img src="assets/cpp.svg" alt="C/C++"><span>C/C++</span>
-            <div class="skill-bar" data-percent="60"><div class="skill-bar-fill"></div></div>
-          </div>
-          <div class="skill"><img src="assets/java.svg" alt="Java"><span>Java</span>
-            <div class="skill-bar" data-percent="60"><div class="skill-bar-fill"></div></div>
-          </div>
-          <div class="skill"><img src="assets/sql.svg" alt="SQL"><span>SQL (MySQL/SQLite)</span>
-            <div class="skill-bar" data-percent="80"><div class="skill-bar-fill"></div></div>
-          </div>
-          <div class="skill"><img src="assets/html5.svg" alt="HTML5"><span>HTML, CSS, JS</span>
-            <div class="skill-bar" data-percent="80"><div class="skill-bar-fill"></div></div>
-          </div>
-          <div class="skill"><img src="assets/git.svg" alt="Git"><span>Git & GitHub</span>
-            <div class="skill-bar" data-percent="85"><div class="skill-bar-fill"></div></div>
-          </div>
-          <div class="skill"><img src="assets/testing.svg" alt="Testing"><span>Manual & Regression Testing</span>
-            <div class="skill-bar" data-percent="80"><div class="skill-bar-fill"></div></div>
-          </div>
-          <div class="skill"><img src="assets/softskills.svg" alt="Problem Solving"><span>Problem Solving</span>
-            <div class="skill-bar" data-percent="90"><div class="skill-bar-fill"></div></div>
-          </div>
-          <div class="skill"><img src="assets/critical.svg" alt="Critical Thinking"><span>Critical Thinking</span>
-            <div class="skill-bar" data-percent="88"><div class="skill-bar-fill"></div></div>
-          </div>
-          <div class="skill"><img src="assets/communication.svg" alt="Communication"><span>Communication</span>
-            <div class="skill-bar" data-percent="86"><div class="skill-bar-fill"></div></div>
-          </div>
+  <!-- ===== ABOUT ===== -->
+  <section id="about" aria-label="About Sudhakar S">
+    <div class="container">
+      <h2 class="section__title"><i class="fas fa-user"></i> About Me</h2>
+      <div class="about__wrapper">
+        <img src="avatar.png" alt="Sudhakar S Profile" class="about__avatar"/>
+        <div class="about__info">
+          <p>
+            <b>Hello!</b> I'm Sudhakar, a dedicated Python developer with strong experience in Django, Flask, and modern web technologies. 
+            I enjoy tackling complex problems, collaborating with cross-functional teams, and automating workflows.<br><br>
+            Let's connect to build scalable, impactful solutions together!
+          </p>
+          <ul class="about__list">
+            <li><i class="fa-solid fa-location-dot"></i> Tamil Nadu, India</li>
+            <li><i class="fa-solid fa-envelope"></i> sudhakarsk101@gmail.com</li>
+            <li><i class="fa-solid fa-code"></i> Python, Django, Flask, SQL, JS, HTML, CSS</li>
+            <li><i class="fa-solid fa-briefcase"></i> UST Global Technology, Tester</li>
+          </ul>
         </div>
-        <div class="resume-row fade-in-delay3">
-          <button class="resume-btn" onclick="openResume()">Download Resume</button>
-        </div>
-      </div>
-      <div class="extra-info fade-in-delay3">
-        <h4>Hobbies:</h4>
-        <p>Travel, Drawing, Music</p>
-      </div>
-    </div>
-    <!-- Resume modal -->
-    <div id="resume-modal" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeResume()">&times;</span>
-        <iframe src="resume.pdf" frameborder="0"></iframe>
-        <a href="resume.pdf" download class="resume-download-link">Download PDF</a>
       </div>
     </div>
   </section>
-
-  <!-- EXPERIENCE -->
-  <section id="experience" class="page-section">
-    <div class="section-content experience-content">
-      <h2 class="section-title fade-in">Experience</h2>
-      <div class="exp-card fade-in-delay">
-        <h3>Tester</h3>
-        <p><strong>UST Global Technology</strong>, Bangalore<br>
-        <span class="exp-date">May 2024 - Present</span></p>
-        <ul>
-          <li>Executed comprehensive manual testing for semiconductor validation with detailed test plans and scripts across various configurations.</li>
-          <li>Collaborated with cross-functional teams to identify software defects and troubleshoot hardware/software integration issues.</li>
-          <li>Analyzed test results and reported bugs/issues, providing actionable recommendations for product enhancement.</li>
-          <li>Worked across diverse domains including security, manageability, and gaming, utilizing various tools for efficient execution.</li>
-          <li>Enhanced testing efficiency by developing scripts to automate routine validation tasks, achieving a 38% reduction in testing time.</li>
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" aria-label="Skills">
+    <div class="container">
+      <h2 class="section__title"><i class="fas fa-laptop-code"></i> Skills</h2>
+      <div class="skills__grid">
+        <div>
+          <div class="skillbar" data-percent="98">
+            <span class="skillbar__label"><i class="fa-brands fa-python"></i> Python</span>
+            <div class="skillbar__track"><div class="skillbar__progress"></div></div>
+            <span class="skillbar__percent">98%</span>
+          </div>
+          <div class="skillbar" data-percent="92">
+            <span class="skillbar__label"><i class="fa-solid fa-database"></i> Django & Flask</span>
+            <div class="skillbar__track"><div class="skillbar__progress"></div></div>
+            <span class="skillbar__percent">92%</span>
+          </div>
+          <div class="skillbar" data-percent="80">
+            <span class="skillbar__label"><i class="fa-solid fa-database"></i> SQL (MySQL/SQLite)</span>
+            <div class="skillbar__track"><div class="skillbar__progress"></div></div>
+            <span class="skillbar__percent">80%</span>
+          </div>
+          <div class="skillbar" data-percent="60">
+            <span class="skillbar__label"><i class="fa-brands fa-java"></i> Java</span>
+            <div class="skillbar__track"><div class="skillbar__progress"></div></div>
+            <span class="skillbar__percent">60%</span>
+          </div>
+          <div class="skillbar" data-percent="60">
+            <span class="skillbar__label"><i class="fa-solid fa-microchip"></i> C/C++</span>
+            <div class="skillbar__track"><div class="skillbar__progress"></div></div>
+            <span class="skillbar__percent">60%</span>
+          </div>
+        </div>
+        <div>
+          <div class="skillbar" data-percent="80">
+            <span class="skillbar__label"><i class="fa-brands fa-html5"></i> HTML, CSS, JS</span>
+            <div class="skillbar__track"><div class="skillbar__progress"></div></div>
+            <span class="skillbar__percent">80%</span>
+          </div>
+          <div class="skillbar" data-percent="85">
+            <span class="skillbar__label"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+            <div class="skillbar__track"><div class="skillbar__progress"></div></div>
+            <span class="skillbar__percent">85%</span>
+          </div>
+          <div class="skillbar" data-percent="80">
+            <span class="skillbar__label"><i class="fa-solid fa-vial"></i> Manual & Regression Testing</span>
+            <div class="skillbar__track"><div class="skillbar__progress"></div></div>
+            <span class="skillbar__percent">80%</span>
+          </div>
+          <div class="skillbar" data-percent="90">
+            <span class="skillbar__label"><i class="fa-solid fa-brain"></i> Problem Solving</span>
+            <div class="skillbar__track"><div class="skillbar__progress"></div></div>
+            <span class="skillbar__percent">90%</span>
+          </div>
+          <div class="skillbar" data-percent="88">
+            <span class="skillbar__label"><i class="fa-solid fa-lightbulb"></i> Critical Thinking</span>
+            <div class="skillbar__track"><div class="skillbar__progress"></div></div>
+            <span class="skillbar__percent">88%</span>
+          </div>
+          <div class="skillbar" data-percent="86">
+            <span class="skillbar__label"><i class="fa-solid fa-comments"></i> Communication</span>
+            <div class="skillbar__track"><div class="skillbar__progress"></div></div>
+            <span class="skillbar__percent">86%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" aria-label="Experience">
+    <div class="container">
+      <h2 class="section__title"><i class="fas fa-briefcase"></i> Experience</h2>
+      <div class="experience__card">
+        <div class="experience__title">UST Global Technology</div>
+        <div class="experience__subtitle">Tester &middot; Bangalore &middot; May 2024 – Present</div>
+        <ul class="experience__details">
+          <li>Manual testing for semiconductor validation</li>
+          <li>Test plans/scripts across multiple configurations</li>
+          <li>Found and reported bugs, collaborated with dev teams</li>
+          <li>Enhanced validation efficiency with automation (38% faster)</li>
         </ul>
       </div>
     </div>
   </section>
-  <!-- PROJECTS -->
-  <section id="projects" class="page-section">
-    <div class="section-content projects-content">
-      <h2 class="section-title fade-in">Projects</h2>
-      <div class="projects-list">
-        <div class="project-card fade-in-delay">
-          <img src="assets/journeylog.png" alt="Journey Log Application" class="project-img" />
-          <h3>Journey Log Application</h3>
-          <p>Major Project | Jan 2023 - Apr 2023</p>
-          <p>Developed a Journey Log application with Kivy/KivyMD and Firebase, enabling users to document and monitor travel adventures with an intuitive UI.</p>
-          <div class="project-tools">Kivy • KivyMD • Firebase</div>
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" aria-label="Projects">
+    <div class="container">
+      <h2 class="section__title"><i class="fas fa-code"></i> Projects</h2>
+      <div class="projects__grid">
+        <div class="project__card">
+          <div>
+            <div class="project__title">Journey Log App</div>
+            <div class="project__tools"><b>Tools:</b> Kivy, KivyMD, Firebase</div>
+            <div class="project__desc">A travel journaling mobile app with user-friendly UI, allowing users to track, describe, and organize their journeys.</div>
+          </div>
         </div>
-        <div class="project-card fade-in-delay2">
-          <img src="assets/travelblog.png" alt="Travel Blog Application" class="project-img" />
-          <h3>Travel Blog Application</h3>
-          <p>Mini Project | Sep 2022 - Dec 2022</p>
-          <p>Built a web-based travel blog using Django. Implemented post creation, viewing, and user profile management, demonstrating fullstack skills.</p>
-          <div class="project-tools">HTML • CSS • JS • Python (Django) • MySQL</div>
+        <div class="project__card">
+          <div>
+            <div class="project__title">Travel Blog</div>
+            <div class="project__tools"><b>Tools:</b> Django, MySQL, HTML/CSS/JS</div>
+            <div class="project__desc">A blog platform for travelers to post stories, comment, and manage their profiles. Features authentication, CRUD, and interactive UI.</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- CERTIFICATIONS & PUBLICATIONS -->
-  <section id="achievements" class="page-section">
-    <div class="section-content achievements-content">
-      <h2 class="section-title fade-in">Certifications & Publications</h2>
-      <div class="badges-list fade-in-delay">
-        <span class="badge">Data Science with Python (Simplilearn)</span>
-        <span class="badge">SQL Certificate (HackerRank)</span>
-        <span class="badge">Problem Solving (HackerRank)</span>
-        <span class="badge">Python For Data Science (Udmey)</span>
-        <span class="badge">Automate the Boring Stuff with Python (Udemy)</span>
-      </div>
+  <!-- ===== CERTIFICATIONS ===== -->
+  <section id="certifications" aria-label="Certifications">
+    <div class="container">
+      <h2 class="section__title"><i class="fas fa-certificate"></i> Certifications</h2>
+      <ul class="cert__list">
+        <li><i class="fa-solid fa-certificate"></i> Data Science with Python (Simplilearn)</li>
+        <li><i class="fa-solid fa-certificate"></i> SQL Certificate (HackerRank)</li>
+        <li><i class="fa-solid fa-certificate"></i> Problem Solving (HackerRank)</li>
+        <li><i class="fa-solid fa-certificate"></i> Python for Data Science (Udemy)</li>
+        <li><i class="fa-solid fa-certificate"></i> Automate the Boring Stuff with Python (Udemy)</li>
+      </ul>
     </div>
   </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="page-section">
-    <div class="section-content contact-content">
-      <h2 class="section-title fade-in">Contact</h2>
-      <p class="fade-in-delay">Have an idea, project, or just want to say hi? I’d love to hear from you.</p>
-      <form class="contact-form fade-in-delay2" id="contact-form" autocomplete="off">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit" class="send-btn"><span>Send Message</span></button>
-        <div id="contact-status"></div>
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" aria-label="Contact">
+    <div class="container">
+      <h2 class="section__title"><i class="fas fa-envelope"></i> Contact</h2>
+      <form id="contact-form" novalidate>
+        <div class="form__group">
+          <label class="form__label" for="name">Name <span aria-hidden="true">*</span></label>
+          <input type="text" class="form__input" id="name" name="name" required aria-required="true" autocomplete="off"/>
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="email">Email <span aria-hidden="true">*</span></label>
+          <input type="email" class="form__input" id="email" name="email" required aria-required="true" autocomplete="off"/>
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="message">Message <span aria-hidden="true">*</span></label>
+          <textarea class="form__textarea" id="message" name="message" rows="5" required aria-required="true"></textarea>
+        </div>
+        <button type="submit" class="btn btn--submit"><i class="fas fa-paper-plane"></i> Send</button>
+        <div class="form__status" id="form-status" aria-live="polite"></div>
       </form>
-      <div class="contact-socials fade-in-delay3">
-        <a href="https://github.com/Sudhakarsk6" target="_blank"><img src="assets/github.svg" alt="GitHub"></a>
-        <a href="https://linkedin.com/in/sudhakarsk" target="_blank"><img src="assets/linkedin.svg" alt="LinkedIn"></a>
-        <a href="https://leetcode.com/sudhakarsk" target="_blank"><img src="assets/leetcode.svg" alt="LeetCode"></a>
-        <a href="https://hackerrank.com/sudhakarsk101" target="_blank"><img src="assets/hackerrank.svg" alt="HackerRank"></a>
-      </div>
     </div>
   </section>
+  <!-- ===== RESUME MODAL ===== -->
+  <div id="resume-modal" class="modal" aria-modal="true" role="dialog" aria-labelledby="resume-title" tabindex="-1">
+    <div class="modal__content">
+      <button class="modal__close" aria-label="Close resume modal"><i class="fas fa-times"></i></button>
+      <h2 class="modal__title" id="resume-title">Resume Preview</h2>
+      <iframe src="resume.pdf" class="modal__iframe" title="Resume Preview"></iframe>
+      <a href="resume.pdf" class="modal__download" download><i class="fas fa-download"></i> Download Resume</a>
+    </div>
+  </div>
+  <!-- ===== FOOTER ===== -->
   <footer>
-    <p>&copy; <span id="year"></span> Sudhakar S. All rights reserved.</p>
+    <div class="footer__copyright">&copy; 2025 Sudhakar S. All rights reserved.</div>
+    <div class="footer__socials">
+      <a href="mailto:sudhakar.sk101@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://github.com/Sudhakarsk6" aria-label="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+    </div>
   </footer>
-  <script src="app.js"></script>
+  <!-- ===== SCRIPTS ===== -->
+  <script src="script.js"></script>
 </body>
 </html>
