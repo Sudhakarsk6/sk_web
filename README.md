@@ -1,4 +1,4 @@
-# Sudhakar S — 3D Portfolio
+# Sudhakar Sk
 
 React + Vite + Framer Motion portfolio with a layered-photo parallax hero.
 
