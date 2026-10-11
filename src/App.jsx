@@ -72,7 +72,6 @@ const CREDS = [
 
 const CONTACTS = [
   ["Email", "sudhakarsk101@gmail.com", "mailto:sudhakarsk101@gmail.com"],
-  ["Phone", "+91 79048 44037", "tel:+917904844037"],
   ["LinkedIn", "in/sudhakarsk", "https://www.linkedin.com/in/sudhakarsk"],
   ["GitHub", "Sudhakarsk6", "https://github.com/Sudhakarsk6"],
   ["LeetCode", "u/sudhakarsk", "https://leetcode.com/u/sudhakarsk"],
